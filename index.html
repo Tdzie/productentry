@@ -1,1 +1,50 @@
-safw
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product JSON Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Product JSON Generator</h1>
+        <form id="product-form">
+            <label for="upc">UPC:</label>
+            <input type="text" id="upc" name="upc" required>
+            <label for="mainDescription">Main Description:</label>
+            <input type="text" id="mainDescription" name="mainDescription" required>
+            <label for="generalDescription">General Description:</label>
+            <input type="text" id="generalDescription" name="generalDescription" required>
+            <label for="altDescription">Alt Description:</label>
+            <input type="text" id="altDescription" name="altDescription" required>
+            <label for="size">Size:</label>
+            <input type="number" id="size" name="size" required>
+            <label for="unit">Unit:</label>
+            <select id="unit" name="unit">
+                <option value="POUND">POUND</option>
+                <option value="QUART">QUART</option>
+                <option value="EACH">EACH</option>
+                <option value="50 COUNT">50 COUNT</option>
+                <option value="100 COUNT">100 COUNT</option>
+                <option value="OUNCE">OUNCE</option>
+                <option value="750ml">750ml</option>
+                <option value="15l">15l</option>
+            </select>
+            <label for="lb">LB:</label>
+            <select id="lb" name="lb">
+                <option value="no">no</option>
+                <option value="yes">yes</option>
+            </select>
+            <button type="submit" id="add">Add</button>
+        </form>
+        <button id="download">Download</button>
+        <p>Items stored: <span id="items-stored">0</span></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+
+</html>
